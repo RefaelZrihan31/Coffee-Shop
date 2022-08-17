@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>עדכון מוצר</title>
+    <link rel="stylesheet" href="/style/fonts.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css"
+        integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/register_style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <script src="/js/usersArray.js"></script>
+    <script src="js/productsArray.js"></script>
+    <script src="js/product.js"></script>
+    <script src="/js/functions.js"></script>
+    <script defer src="/js/main.js"></script>
+</head>
+
+<body dir="rtl">
+    <div class="container-fluid bg-login">
+        <div class="container">
+            <form id="updateProduct">
+                <div class="row">
+                    <div class="col-lg-9 col-md-12 login-card">
+                        <div class="row">
+                            <div class="col-md-5 py-5 detail-part">
+                                <h1>עדכון מוצר</h1>
+                            </div>
+                            <div class="col-md-7 logn-part ">
+                                <div class="row">
+                                    <div class="col-lg-10 col-md-12 mx-auto">
+                                        <br><br>
+                                        <div class="form-cover">
+                                            <div class="form-input">
+                                                <label class="col-sm-3" for="product_sn">מספר סידורי</label>
+                                                <input id="product_sn"
+                                                    title="יש לכתוב מס' סידורי שמכיל מס' ואותיות לועזיות בלבד"
+                                                    type="text" class="form-control" disabled />
+                                            </div>
+                                            <div class="form-input">
+                                                <label class="col-sm-3" for="product_name">שם המוצר</label>
+                                                <input id="product_name"
+                                                    title="יש לכתוב את שם המוצר באותיות לועזיות בלבד" type="text"
+                                                    class="form-control" required />
+                                            </div>
+                                            <div class="form-input">
+                                                <label class="col-sm-5" for="product_orignal_price">מחיר המוצר
+                                                    המקורי</label>
+                                                <input id="product_orignal_price" type="number" step="0.000001"
+                                                    class="form-control" required />
+                                            </div>
+                                            <div class="form-input">
+                                                <label class="col-sm-5" for="product_finale_price">מחיר המוצר לאחר
+                                                    הנחה</label>
+                                                <input id="product_finale_price" type="number" step="0.000001"
+                                                    class="form-control" required />
+                                            </div>
+                                            <div class="form-input">
+                                                <label class="col-sm-3" for="product_description">תיאור המוצר</label>
+                                                <textarea id="product_description"
+                                                    title="יש לכתוב עד 150 תווים לכל היותר" maxlength="150" type="text"
+                                                    class="form-control" required></textarea>
+                                            </div>
+                                            <br>
+                                            <class="form-input">
+                                                <label class="col-sm-3" for="product_category">קטגוריה</label>
+                                                <br>
+                                                <select class="col-sm-5" id="product_category" type="text"
+                                                    class="form-control" required>
+                                                    <option value="coffee_capsule">קפסולות קפה</option>
+                                                    <option value="coffee_beans">פולי קפה</option>
+                                                    <option value="coffee_ground">קפה טחון</option>
+                                                    <option value="nespresso_machine">מכונות קפה נספרסו</option>
+                                                    <option value="coffee_machine">מכונות קפה מקצועיות</option>
+                                                    <option value="mugs">כוסות וספלי קפה</option>
+                                                    <option value="makineta">מקינטה</option>
+                                                    <option value="milk_steamer">מקציפי חלב</option>
+                                                    <option value="grinder">מטחנות קפה</option>
+                                                </select>
+                                        </div>
+                                        <br>
+                                        <div class="form-input">
+                                            <label class="col-sm-3" for="product_file">תמונת המוצר</label>
+                                            <input id="product_file" type="file" accept="photoCart/*" required />
+                                        </div>
+                                        <div class="row form-footer wx-100">
+                                            <div class="col-md-6 button-div">
+                                                <div class="form-input">
+                                                    <br><br>
+                                                    <button type="submit" class="btn btn-primary">עדכן מוצר</button>
+                                                    <button type="reset" class="btn btn-primary">אפס
+                                                        שדות</button>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

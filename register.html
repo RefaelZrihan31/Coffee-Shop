@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>הרשמה</title>
+    <link rel="stylesheet" href="/style/fonts.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css"
+        integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/register_style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <script src="/js/usersArray.js"></script>
+    <script src="/js/israel-cities.js"></script>
+    <script src="/js/functions.js"></script>
+    <script src="js/user.js"></script>
+    <script defer src="/js/main.js"></script>
+</head>
+
+<body dir="rtl">
+    <div class="container-fluid bg-login">
+        <div class="container">
+            <form id="register_form">
+                <div class="row">
+                    <div class="col-lg-9 col-md-12 login-card">
+                        <div class="row">
+                            <div class="col-md-5 py-5 detail-part">
+                                <h1>הרשמה</h1>
+                            </div>
+                            <div class="col-md-7 logn-part ">
+                                <div class="row">
+                                    <div class="col-lg-10 col-md-12 mx-auto">
+                                        <br><br>
+                                        <div class="form-cover">
+                                            <div class="form-input">
+                                                <label class="col-sm-3" for="user_name">שם משתמש</label>
+                                                <input id="user_name" type="text" pattern="[!-~]{1,60}"
+                                                    title="חייב להיות לפחות באורך תו אחד ומקסימום 60 תווים. אותיות לועזיות בלבד, מספרים ותווים מיוחדים."
+                                                    class="form-control" required />
+                                            </div>
+                                            <div class="form-input">
+                                                <label class="col-sm-3" for="user_pass">סיסמה</label>
+                                                <input id="user_pass" type="password"
+                                                    pattern="(?=.*[A-Z])(?=.*[a-z])[!-~]{7,12}"
+                                                    title="מכילה בין 7 ל- 12 תווים. יש לוודא שיש לפחות תו אחד מיוחד, אות גדולה ומספר."
+                                                    class="form-control" required />
+                                            </div>
+                                            <div class="form-input">
+                                                <label class="col-sm-3" for="user_pass_confirm">אימות סיסמה</label>
+                                                <input id="user_pass_confirm"
+                                                    pattern="(?=.*[A-Z])(?=.*[a-z])[!-~]{7,12}"
+                                                    title="מכילה בין 7 ל- 12 תווים. יש לוודא שיש לפחות תו אחד מיוחד, אות גדולה ומספר."
+                                                    type="password" class="form-control" required />
+                                            </div>
+                                            <div class="form-input">
+                                                <label class="col-sm-3" for="user_first_name">שם פרטי</label>
+                                                <input id="user_first_name" type="text" pattern="[A-Za-z]{1,60}"
+                                                    class="form-control" required />
+                                            </div>
+                                            <div class="form-input">
+                                                <label class="col-sm-3" for="user_last_name">שם משפחה</label>
+                                                <input id="user_last_name" type="text" pattern="[A-Za-z]{1,60}"
+                                                    class="form-control" required />
+                                            </div>
+                                            <div class="form-input">
+                                                <label class="col-sm-3" for="user_email">כתובת אימייל</label>
+                                                <input id="user_email" placeholder="name@example.com" type="email"
+                                                    pattern="[A-Za-z]\D+@[A-Za-z]+\.com" title="name@example.com"
+                                                    class="form-control" required />
+                                            </div>
+
+                                            <div class="form-input">
+                                                <label class="col-sm-3" for="user_birth_date">תאריך לידה</label>
+                                                <input id="user_birth_date" type="date" class="form-control" required />
+                                            </div>
+                                            <div class="form-input">
+                                                <label class="col-sm-3" for="user_city">עיר</label>
+                                                <input id="user_city" type="text" class="form-control" list="cities"
+                                                    required />
+                                                <datalist id="cities">
+                                                </datalist>
+
+                                            </div>
+                                            <div class="form-input">
+                                                <label class="col-sm-3" for="user_street">רחוב</label>
+                                                <input id="user_street" type="text" class="form-control" required />
+
+                                            </div>
+                                            <div class="form-input">
+                                                <label class="col-sm-3" for="user_street_number">מספר בית</label>
+                                                <input id="user_street_number" min="1" max="999" type="number"
+                                                    class="form-control" required />
+                                            </div>
+                                            <div class="form-input">
+                                                <label class="col-sm-3" for="user_profile_file">תמונת פרופיל</label>
+                                                <input id="user_profile_file" type="file" accept="pics/*" required />
+                                                <img id="user_profile_image" src=""
+                                                    style="width:300px; max-height: 600px;" />
+                                            </div>
+                                            <div class="row form-footer wx-100">
+                                                <div class="col-md-6 button-div">
+                                                    <div class="form-input">
+                                                        <br><br>
+                                                        <button type="submit" class="btn btn-primary">הירשם</button>
+                                                        <button type="reset" class="btn btn-primary">אפס
+                                                            שדות</button>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

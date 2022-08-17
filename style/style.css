@@ -1,0 +1,135 @@
+body {
+    font-family: VarelaRound;
+    background-color: rgba(239, 239, 239, 0.454);
+
+}
+
+.navbar-padding li {
+    font-size: 120%;
+
+}
+
+.icon-coffe-nav {
+    display: flex;
+
+}
+
+#titleCaruselIndex {
+    direction: ltr;
+    font-size: 5vh;
+    font-style: italic;
+    height: 15vh;
+}
+
+#textCaruselIndex {
+    font-size: 2vh;
+}
+
+#stratDay1 {
+    background-color: rgba(227, 172, 119);
+    right: 12%;
+}
+
+#stratDay {
+    font-family: anticSlab;
+    direction: ltr;
+    text-align: center;
+    font-size: 4vh;
+    font-weight: bolder;
+}
+
+#productDesHP {
+    text-align: center;
+    font-size: 3.1vh;
+    font-weight: bolder;
+}
+
+#productDesHP2 {
+    text-align: center;
+    font-size: 2.1vh;
+    font-weight: bolder;
+}
+
+
+
+
+#register_form {
+    max-width: 530px;
+    padding: 10px;
+    margin-right: 5%;
+    border-radius: 0.3em;
+}
+
+#imgRegister {
+    background-image: url('/pics/Pic_Covers/Coffee_Beans_Pic.jpg');
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+#register_title {
+    font-family: anticSlab;
+    direction: ltr;
+    text-align: center;
+    font-size: 4vh;
+    font-weight: bolder;
+
+
+}
+
+#register_title1 {
+    background-color: rgba(227, 172, 119);
+}
+
+@media screen and (max-width: 576px) {
+    #register_form {
+        max-width: 230px;
+        margin-right: 0 auto;
+    }
+
+    body {
+        display: block;
+        align-items: center;
+    }
+
+    #imgRegister {
+        background-image: none;
+
+    }
+
+}
+
+/* עיצוב פוטר */
+footer {
+    background-color: rgba(136, 182, 195, 0.817);
+    color: #ffff !important;
+
+}
+
+small {
+    font-size: calc(12px + (14 - 12) * ((100vw - 360px) / (1600 - 360))) !important
+}
+
+.foot-text {
+    direction: ltr;
+    font-size: 3.2vh;
+    font-style: italic;
+    color: rgb(53, 49, 45) !important
+}
+
+.social {
+    position: relative;
+    left: -10px
+}
+
+.Subscribe {
+    background-color: #342e2ec1 !important;
+    color: #ffff !important;
+    font-weight: bold
+}
+
+li:not(:first-child) {
+    color: rgb(23, 22, 22) !important
+}
+
+/* עד פה - עיצוב פוטר */

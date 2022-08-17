@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>קטגוריות מכונות קפה</title>
+    <link rel="stylesheet" href="/style/fonts.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css"
+        integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/style/product_detail_style.css">
+    <link rel="stylesheet" href="/style/category.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <script src="/js/usersArray.js"></script>
+    <script src="/js/productsArray.js"></script>
+    <script src="/js/functions.js"></script>
+    <script defer src="/js/main.js"></script>
+</head>
+
+<body dir="rtl">
+    <nav class="navbar text-danger navbar-expand-lg navbar-dark " style="background-color: rgb(136, 182,195);">
+        <div class="container-fluid">
+
+            <div class="icon-coffe-nav">
+                <a class="navbar-brand">
+                    <img src="/pics/icons/coffeeNavBarLogo.png" alt="" width="55" height="30"
+                        class="d-inline-block align-text-top">
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarColor02">
+                <div class="navbar-padding">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item px-3">
+                            <a class="nav-link active" href="index.html">דף הבית
+                                <span class="visually-hidden">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown px-3">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                                aria-haspopup="true" aria-expanded="false">מכונות קפה</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#" data-cater="מכונות קפה" id="coffee_machine">מכונות
+                                    מקצועיות</a>
+                                <a class="dropdown-item" href="#" data-cater="מכונות נספרסו"
+                                    id="nespresso_machine">מכונות נספרסו</a>
+                                <a class="dropdown-item" href="#" data-cater="מקינטות" id="makineta">מקינטה</a>
+
+                            </div>
+                        <li class="nav-item dropdown px-3">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                                aria-haspopup="true" aria-expanded="false">סוגי קפה</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#" data-cater="קפה טחון" id="coffee_ground">קפה טחון</a>
+                                <a class="dropdown-item" href="#" data-cater="קפסולות קפה" id="coffee_capsule">קפסולות
+                                    קפה</a>
+                                <a class="dropdown-item" href="#" data-cater="פולי קפה" id="coffee_beans">פולי קפה</a>
+                            </div>
+                        <li class="nav-item dropdown px-3">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                                aria-haspopup="true" aria-expanded="false">אביזרי קפה</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#" data-cater="מטחנות קפה" id="grinder">מטחנות</a>
+                                <a class="dropdown-item" href="#" data-cater="מקציפי חלב" id="milk_steamer">מקציפים</a>
+                                <a class="dropdown-item" href="#" data-cater="כוסות וספלים לקפה" id="mugs">כוסות
+                                    וספלים</a>
+                            </div>
+                        <li class="nav-item px-3">
+                            <a class="nav-link" href="/about.html">אודותינו</a>
+                        </li>
+                </div>
+                </ul>
+            </div>
+            <div class="icon-coffe-nav">
+                <a href="/shoppingCart.html" class="navbar-brand">
+                    <span class="position-absolute top-25 start-95 translate-middle badge rounded-pill bg-danger"> <span
+                            class="total-count">0</span>
+
+                        <span class="visually-hidden"></span></span>
+                    <img src="/pics/icons/shoppingCartLogo.png" href="#" width="40" height="32" data-cater="סל הקניות"
+                        id="shop" class="d-inline-block align-text-top cart">
+
+
+                </a>
+                <a href="/login.html" class="navbar-brand">
+                    <img src="/pics/icons/UserIcon.png" alt="" width="38" height="32" data-cater="התחברות" id="login"
+                        class="d-inline-block align-text-top">
+                </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02"
+                aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    </nav>
+    <br>
+
+    <div id="productTitle" class="container-xxl">
+    </div>
+
+    <div class="container mt-5 mb-5">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="row" id="product-current-holder">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <br>
+    <div class="container review_contain">
+        <div class="card review_card">
+            <div class="mgb-40 padb-30 auto-invert line-b-4 align-center">
+                <h1 class="font-cond-b fg-text-d lts-md fs-300 fs-300-xs no-mg" contenteditable="false">המלצות וחוות
+                    דעת:</h1>
+            </div>
+            <ul class="hash-list cols-3 cols-1-xs pad-30-all align-center text-sm">
+                <li>
+                    <img src="/pics/Reveiw pic/member-01.jpg" class="wpx-100 img-round mgb-20" title="" alt=""
+                        data-edit="false" data-editor="field"
+                        data-field="src[Image Path]; title[Image Title]; alt[Image Alternate Text]">
+                    <p class="fs-110 font-cond-l" contenteditable="false"> "קפה משובח וטרי כאין כמותו וחווית קנייה נעימה
+                        מאוד"</p>
+                    <h5 class="font-cond mgb-5 fg-text-d fs-130" contenteditable="false">אמיר לוי</h5>
+                    <small class="font-cond case-u lts-sm fs-80 fg-text-l" contenteditable="false">חולון</small>
+                </li>
+                <li>
+                    <img src="/pics/Reveiw pic/member-02.jpg" class="wpx-100 img-round mgb-20" title="" alt=""
+                        data-edit="false" data-editor="field"
+                        data-field="src[Image Path]; title[Image Title]; alt[Image Alternate Text]">
+                    <p class="fs-110 font-cond-l" contenteditable="false">"מקום מקצועי, שירות מעולה ומוצרים איכותיים.
+                        הבית לקפה שלי.. "</p>
+                    <h5 class="font-cond mgb-5 fg-text-d fs-130" contenteditable="false">רועי שמואל</h5>
+                    <small class="font-cond case-u lts-sm fs-80 fg-text-l" contenteditable="false">באר שבע</small>
+                </li>
+                <li>
+                    <img src="/pics/Reveiw pic/member-03.jpg" class="wpx-100 img-round mgb-20" title="" alt=""
+                        data-edit="false" data-editor="field"
+                        data-field="src[Image Path]; title[Image Title]; alt[Image Alternate Text]">
+                    <p class="fs-110 font-cond-l" contenteditable="false">"ה-מקום לקנות קפה איכותי ולקבל שרות מקצועי
+                        ואדיב במחירים הכי נוחים"</p>
+                    <h5 class="font-cond mgb-5 fg-text-d fs-130" contenteditable="false">גל קיינן</h5>
+                    <small class="font-cond case-u lts-sm fs-80 fg-text-l" contenteditable="false">רמת גן</small>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div class="container">
+        <h4>מוצרים נוספים שיכולים לעניין אותך:</h4>
+        <br>
+        <div class="row row-cols-1 row-cols-md-4 g-4 m-2">
+            <div class="col">
+                <div class="card h-50 w-75">
+                    <img src="/photoCart/BialettiMokaItalia.jpg" class="card-img-top h-75 d-inline-block">
+                    <div class="card-body" style="background-color: rgb(238, 195, 134);">
+                        <h5 class="card-title" id="productDesHP2">מקינטה Bialetti Moka Italia</h5>
+                    </div>
+                    <small class="text-muted">159.00 ש״ח</small>
+                    <button data-cater="מקינטות"
+                        class="card-footer-pk btn btn-outline-dark btn-sm rounded-pill text-uppercase mr-2 px-4"
+                        data-serialn="MK170308">לפרטים נוספים</button>
+                </div>
+
+            </div>
+
+            <div class="col">
+                <div class="card h-50 w-75">
+                    <img src="/photoCart/DedicaEC685DELONGI.jpeg" class="card-img-top h-75 d-inline-block">
+                    <div class="card-body" style="background-color: rgb(238, 195, 134);">
+                        <h5 class="card-title" id="productDesHP2">Delonghi DEDICA EC685</h5>
+                    </div>
+                    <small class="text-muted"> 799.00 ש״ח</small>
+                    <button data-cater="מכונות קפה"
+                        class="card-footer-pk btn btn-outline-dark btn-sm rounded-pill text-uppercase mr-2 px-4"
+                        data-serialn="CM170302">לפרטים נוספים</button>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-50 w-75">
+                    <img src="/photoCart/AnfimSpiiCoffeeGrinder.jpg" class="card-img-top h-75 d-inline-block">
+                    <div class="card-body" style="background-color: rgb(238, 195, 134);">
+                        <h5 class="card-title" id="productDesHP2">Anfim Spii Coffee Grinder</h5>
+                    </div>
+                    <small class="text-muted">4,999.00 ש״ח</small>
+                    <button data-cater="מטחנות קפה"
+                        class="card-footer-pk btn btn-outline-dark btn-sm rounded-pill text-uppercase mr-2 px-4"
+                        data-serialn="GR170310">לפרטים נוספים</button>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-50 w-75">
+                    <img src="/photoCart/PhilipsEP324350.jpeg" class="card-img-top h-75 d-inline-block">
+                    <div class="card-body" style="background-color: rgb(238, 195, 134);">
+                        <h5 class="card-title" id="productDesHP2">Philips EP3243-50 <br>
+                            <br>
+                            <br> </h5>
+                    </div>
+                    <small class="text-muted">2,750.00 ש״ח</small>
+                    <button data-cater="מכונות קפה"
+                        class="card-footer-pk btn btn-outline-dark btn-sm rounded-pill text-uppercase mr-2 px-4"
+                        data-serialn="CM170297">לפרטים נוספים</button>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+    <br>
+    <hr>
+</body>
+
+<footer>
+    <hr>
+    <div class="row justify-content-around mb-0 mx-5">
+        <div class="col-xl-3 col-md-3 pt-4 order-1">
+            <ul class="list-unstyled">
+                <h5>לפרטים נוספים ויצירת קשר:</h5>
+                <li>טלפון: 077-2564234</li>
+                <li>דוא״ל: shop@espresso-ruppin.co.il</li>
+                <li>כתובת: רח׳ האורן 25 , פתח תקווה.</li>
+                <li>מעבדה: המעפילים 11 , רחובות.</li>
+            </ul>
+        </div>
+        <div class="col-xl-auto col-md-6 col-12 pt-4 my-sm-0 order-1 ">
+            <div class="form-group "><label for="email" class="mb-3"><b>הכניסו את המייל שלכם ונציג יחזור אליכם
+                        בהקדם!</b></label><input type="email" class="form-control form-control-lg"
+                    placeholder="Enter email" id="email">
+                <button type="button" class="btn  btn-md btn-block  Subscribe mt-2 mb-1 ">Send</button>
+            </div>
+        </div>
+        <div class="col-xl-auto col-md-6 col-12 pt-4 my-sm-0 ">
+            <div class="col text-center foot-text">
+                <p class="mb-1">Keep clam and drink coffee.</p>
+                <img src="/pics/RandomPic/black_coffee_footer.png" alt="" width="60px">
+            </div>
+        </div>
+    </div>
+    <hr>
+</footer>
+
+</html>

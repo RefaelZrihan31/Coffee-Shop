@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>דף אדמין</title>
+  <link rel="stylesheet" href="/style/fonts.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css"
+    integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N" crossorigin="anonymous">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="/style/adminPage.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+  </script>
+  <script src="/js/usersArray.js"></script>
+  <script src="/js/productsArray.js"></script>
+  <script src="/js/functions.js"></script>
+  <script defer src="/js/main.js"></script>
+</head>
+
+<body dir="rtl">
+
+  <nav class="navbar text-danger navbar-expand-lg navbar-dark " style="background-color: rgb(136, 182,195);">
+    <div class="container-fluid">
+
+      <div class="icon-coffe-nav">
+        <a class="navbar-brand">
+          <img src="/pics/icons/coffeeNavBarLogo.png" alt="" width="55" height="30"
+            class="d-inline-block align-text-top">
+        </a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarColor02">
+        <div class="navbar-padding">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item px-3">
+              <a class="nav-link active" href="index.html">דף הבית
+                <span class="visually-hidden">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item dropdown px-3">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                aria-expanded="false">מכונות קפה</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#" data-cater="מכונות קפה" id="coffee_machine">מכונות מקצועיות</a>
+                <a class="dropdown-item" href="#" data-cater="מכונות נספרסו" id="nespresso_machine">מכונות נספרסו</a>
+                <a class="dropdown-item" href="#" data-cater="מקינטות" id="makineta">מקינטה</a>
+
+              </div>
+            <li class="nav-item dropdown px-3">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                aria-expanded="false">סוגי קפה</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#" data-cater="קפה טחון" id="coffee_ground">קפה טחון</a>
+                <a class="dropdown-item" href="#" data-cater="קפסולות קפה" id="coffee_capsule">קפסולות קפה</a>
+                <a class="dropdown-item" href="#" data-cater="פולי קפה" id="coffee_beans">פולי קפה</a>
+              </div>
+            <li class="nav-item dropdown px-3">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                aria-expanded="false">אביזרי קפה</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#" data-cater="מטחנות קפה" id="grinder">מטחנות</a>
+                <a class="dropdown-item" href="#" data-cater="מקציפי חלב" id="milk_steamer">מקציפים</a>
+                <a class="dropdown-item" href="#" data-cater="כוסות וספלים לקפה" id="mugs">כוסות וספלים</a>
+              </div>
+            <li class="nav-item px-3">
+              <a class="nav-link" href="/about.html">אודותינו</a>
+            </li>
+        </div>
+        </ul>
+      </div>
+      <div class="icon-coffe-nav">
+        <a href="/shoppingCart.html" class="navbar-brand">
+          <span class="position-absolute top-25 start-95 translate-middle badge rounded-pill bg-danger"> <span
+              class="total-count">0</span>
+
+            <span class="visually-hidden"></span></span>
+          <img src="/pics/icons/shoppingCartLogo.png" href="#" width="40" height="32" data-cater="סל הקניות" id="shop"
+            class="d-inline-block align-text-top cart">
+
+
+        </a>
+        <a href="/login.html" class="navbar-brand">
+          <img src="/pics/icons/UserIcon.png" alt="" width="38" height="32" data-cater="התחברות" id="login"
+            class="d-inline-block align-text-top">
+        </a>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02"
+        aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  </nav>
+  <br>
+
+  <div class="container-xxl">
+    <br>
+    <br>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-sm-8 col-lg-6">
+          <div class="section_heading text-center wow fadeInUp" data-wow-delay="0.2s"
+            style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+            <h3>דף מנהל</h3>
+            <p>ניתן לבחור בניהול המשתמשים או בדף ניהול המוצרים:</p>
+            <div class="line"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.2s"
+            style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+            <div class="advisor_thumb"><img src="/pics/adminImg.png" alt="">
+            </div>
+            <a href="/usersManagement.html" style="text-decoration: none;">
+              <div class="single_advisor_details_info">
+                <h5>ניהול משתמשים</h5>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.3s"
+            style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
+
+            <div class="advisor_thumb"><img src="/pics/productAdmin.png" alt="">
+            </div>
+            <a href="/mangmentProducts.html" style="text-decoration: none;">
+              <div class="single_advisor_details_info">
+                <h5>ניהול מוצרים</h5>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br>
+  <br>
+  <br>
+</body>
+
+</html>

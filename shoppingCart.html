@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>סל קניות</title>
+  <link rel="stylesheet" href="/style/fonts.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css"
+    integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N" crossorigin="anonymous">
+  <link rel="stylesheet" href="/style/style.css">
+  <link rel="stylesheet" href="/style/tablePageDesign.css">
+  <link rel="stylesheet" href="/style/product_detail_style.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+  </script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="/js/usersArray.js"></script>
+  <script src="/js/productsArray.js"></script>
+  <script src="/js/functions.js"></script>
+  <script defer src="/js/main.js"></script>
+</head>
+
+<body dir="rtl">
+  <nav class="navbar text-danger navbar-expand-lg navbar-dark " style="background-color: rgb(136, 182,195);">
+    <div class="container-fluid">
+
+      <div class="icon-coffe-nav">
+        <a class="navbar-brand">
+          <img src="/pics/icons/coffeeNavBarLogo.png" alt="" width="55" height="30"
+            class="d-inline-block align-text-top">
+        </a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarColor02">
+        <div class="navbar-padding">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item px-3">
+              <a class="nav-link active" href="index.html">דף הבית
+                <span class="visually-hidden">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item dropdown px-3">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                aria-expanded="false">מכונות קפה</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#" data-cater="מכונות קפה" id="coffee_machine">מכונות מקצועיות</a>
+                <a class="dropdown-item" href="#" data-cater="מכונות נספרסו" id="nespresso_machine">מכונות נספרסו</a>
+                <a class="dropdown-item" href="#" data-cater="מקינטות" id="makineta">מקינטה</a>
+
+              </div>
+            <li class="nav-item dropdown px-3">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                aria-expanded="false">סוגי קפה</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#" data-cater="קפה טחון" id="coffee_ground">קפה טחון</a>
+                <a class="dropdown-item" href="#" data-cater="קפסולות קפה" id="coffee_capsule">קפסולות קפה</a>
+                <a class="dropdown-item" href="#" data-cater="פולי קפה" id="coffee_beans">פולי קפה</a>
+              </div>
+            <li class="nav-item dropdown px-3">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                aria-expanded="false">אביזרי קפה</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#" data-cater="מטחנות קפה" id="grinder">מטחנות</a>
+                <a class="dropdown-item" href="#" data-cater="מקציפי חלב" id="milk_steamer">מקציפים</a>
+                <a class="dropdown-item" href="#" data-cater="כוסות וספלים לקפה" id="mugs">כוסות וספלים</a>
+              </div>
+            <li class="nav-item px-3">
+              <a class="nav-link" href="/about.html">אודותינו</a>
+            </li>
+        </div>
+        </ul>
+      </div>
+      <div class="icon-coffe-nav">
+        <a href="#" class="navbar-brand">
+          <span class="position-absolute top-25 start-95 translate-middle badge rounded-pill bg-danger"> <span
+              class="total-count">0</span>
+
+            <span class="visually-hidden"></span></span>
+          <img src="/pics/icons/shoppingCartLogo.png" href="#" width="40" height="32" data-cater="סל הקניות" id="shop"
+            class="d-inline-block align-text-top cart">
+
+
+        </a>
+        <a href="/login.html" class="navbar-brand">
+          <img src="/pics/icons/UserIcon.png" alt="" width="38" height="32" data-cater="התחברות" id="login"
+            class="d-inline-block align-text-top">
+        </a>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02"
+        aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  </nav>
+  <br>
+
+  <div class="container-xxl">
+    <div class="card title_pru">
+      <div class="card-body">
+
+        <h5 class="card-text text_title">סל הקניות</h5>
+      </div>
+    </div>
+    <br>
+    <div class="tags_location">
+      <a class="tags_location_text" href="/index.html">דף הבית > </a> <a class="tags_location_text" href="#"> סל
+        קניות </a>
+    </div>
+  </div>
+
+
+  <div class="container-xxl">
+
+    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+    <hr>
+    <div class="container bootstrap snippets bootdey">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="main-box no-header clearfix">
+            <div class="main-box-body clearfix">
+              <div class="table-responsive">
+                <table class="table user-list">
+                  <thead>
+                    <tr>
+                      <th><span>מוצר</span></th>
+                      <th></th>
+                      <th><span>מק״ט</span></th>
+                      <th><span>כמות</span></th>
+                      <th><span>מחיר</span></th>
+                      <th><span>סה״כ</span></th>
+                    </tr>
+                  </thead>
+                  <tbody class="products">
+
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="totalPriceCart container-xxl"></div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <hr>
+</body>
+
+<footer>
+  <hr>
+  <div class="row justify-content-around mb-0 mx-5">
+    <div class="col-xl-3 col-md-3 pt-4 order-1">
+      <ul class="list-unstyled">
+        <h5>לפרטים נוספים ויצירת קשר:</h5>
+        <li>טלפון: 077-2564234</li>
+        <li>דוא״ל: shop@espresso-ruppin.co.il</li>
+        <li>כתובת: רח׳ האורן 25 , פתח תקווה.</li>
+        <li>מעבדה: המעפילים 11 , רחובות.</li>
+      </ul>
+    </div>
+    <div class="col-xl-auto col-md-6 col-12 pt-4 my-sm-0 order-1 ">
+      <div class="form-group "><label for="email" class="mb-3"><b>הכניסו את המייל שלכם ונציג יחזור אליכם
+            בהקדם!</b></label><input type="email" class="form-control form-control-lg" placeholder="Enter email"
+          id="email">
+        <button type="button" class="btn  btn-md btn-block  Subscribe mt-2 mb-1 ">Send</button>
+      </div>
+    </div>
+    <div class="col-xl-auto col-md-6 col-12 pt-4 my-sm-0 ">
+      <div class="col text-center foot-text">
+        <p class="mb-1">Keep clam and drink coffee.</p>
+        <img src="/pics/RandomPic/black_coffee_footer.png" alt="" width="60px">
+      </div>
+    </div>
+  </div>
+  <hr>
+</footer>
+
+</html>

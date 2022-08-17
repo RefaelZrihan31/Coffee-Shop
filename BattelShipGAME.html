@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/BattelShip/CSS/BTS-fonts.css">
+    <link rel="stylesheet" href="/BattelShip/CSS/BTS-style.css">
+    <script src="/BattelShip/JS/BTS-functions.js"></script>
+    <script defer src="/BattelShip/JS/BTS-main.js"></script>
+    <title>BattelShip GAME</title>
+</head>
+
+<body>
+
+    <br><br>
+    <div class="maintitle">
+        <span> B a t t e l s h i p</span>
+    </div>
+    <div id="boom"></div>
+    <div class="gridSeting">
+        <h3><u>Choose your grid Size:</u></h3>
+        <section>
+            <input type="radio" name="radio-size" data-size="10">10x10
+            <input type="radio" name="radio-size" data-size="11">11x11
+            <br>
+            <input type="radio" name="radio-size" data-size="12">12x12
+            <input type="radio" name="radio-size" data-size="13">13x13
+            <br>
+            <input type="radio" name="radio-size" data-size="14">14x14
+            <input type="radio" name="radio-size" data-size="15">15x15
+        </section>
+
+        <h4><u>Choose number of battlships to your fleet:</u></h4>
+        <section class="gridSeting-size">
+            <label for="number-ship">Battleship Size 2: </label>
+            <input max="5" min="0" value="0" class="number-ships" type="number" name="number-ship"><br>
+            <label for="number-ship">Battleship Size 3: </label>
+            <input max="4" min="0" value="0" class="number-ships" type="number" name="number-ship"><br>
+            <label for="number-ship">Battleship Size 4: </label>
+            <input max="4" min="0" value="0" class="number-ships" type="number" name="number-ship"><br>
+            <label for="number-ship">Battleship Size 5: </label>
+            <input max="3" min="0" value="0" class="number-ships" type="number" name="number-ship"><br>
+        </section>
+        <div class="btn start-game">
+            <span id="mainTable">Start Game</span><br>
+        </div>
+        <br>
+        <div class="btn reset-game">
+            <span id="resetGame">Reset Game</span>
+        </div>
+    </div>
+
+    <div class="gameBoard">
+    </div>
+    <div class="subUpdateTable">
+        <table>
+            <tr>
+                <td><u>Sub Type</u></td>
+                <td><u>Sub Amount</u></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td class="shipType"></td>
+            </tr>
+            <tr>
+                <td> 3</td>
+                <td class="shipType"></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td class="shipType"></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td class="shipType"></td>
+            </tr>
+        </table>
+
+        <audio id="boomSound" src="/BattelShip/Sound/sinkingShip.mov"></audio>
+
+</body>
+
+</html>
